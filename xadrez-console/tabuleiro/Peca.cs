@@ -38,7 +38,9 @@
 
         public abstract bool[,] movimentosPossiveis();
 
-        
-
+        public bool podeMover(Posicao pos) {
+            Peca p = tab.peca(pos);
+            return p == null || p.cor != cor;
+        }
     }
 }
